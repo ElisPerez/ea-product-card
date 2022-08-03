@@ -26,6 +26,3 @@ import { ProductCard, ProductImage, ProductTitle, ProductButtons } from 'ea-prod
     }
 </ProductCard>
 ```
-
-Keywords
-productcardfernandoherrera
