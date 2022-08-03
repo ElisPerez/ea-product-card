@@ -9,10 +9,20 @@ export interface Props {
   activeClass?: string;
   style?: React.CSSProperties;
 }
-export const ProductTitle = ({ activeClass, className, title, style }: Props) => {
+export const ProductTitle = ({
+  activeClass,
+  className,
+  title,
+  style,
+}: Props) => {
   const { product } = useContext(ProductContext);
 
   return (
-    <span className={`${styles.productDescription} ${className} ${activeClass}`} style={style}>{title ? title : product.title}</span>
+    <span
+      className={`${styles.productDescription} ${className} ${activeClass}`}
+      style={style}
+    >
+      {title ? title : product.title}
+    </span>
   );
 };

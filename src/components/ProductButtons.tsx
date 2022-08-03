@@ -12,7 +12,10 @@ export const ProductButtons = ({ className, style }: Props) => {
   const { increaseBy, counter, maxCount } = useContext(ProductContext);
   // console.log(maxCount);
 
-  const isMaxReached = useCallback(() => !!maxCount && counter === maxCount, [counter, maxCount]);
+  const isMaxReached = useCallback(() => !!maxCount && counter === maxCount, [
+    counter,
+    maxCount,
+  ]);
 
   return (
     <div className={`${styles.buttonsContainer} ${className}`} style={style}>
@@ -23,7 +26,12 @@ export const ProductButtons = ({ className, style }: Props) => {
 
       <div className={styles.countLabel}> {counter} </div>
 
-      <button className={`${styles.buttonAdd} ${isMaxReached() ? styles.disabled :''}`} onClick={() => increaseBy(+1)}>
+      <button
+        className={`${styles.buttonAdd} ${
+          isMaxReached() ? styles.disabled : ''
+        }`}
+        onClick={() => increaseBy(+1)}
+      >
         {' '}
         +{' '}
       </button>

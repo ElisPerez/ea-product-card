@@ -1,4 +1,4 @@
-# EA-Product-Card v0.0.1
+# EA-Product-Card v1.0.0-rc
 
 This is a NPM deployment test package
 
